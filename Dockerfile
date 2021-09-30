@@ -22,6 +22,6 @@ RUN mvn install
 
 #Tomcat
 FROM tomcat:8.0.20-jre8
-COPY --from=build /app/target/maven-web-app*.war /usr/local/tomcat/webapps/maven-web-app.war
+COPY --from=build /app/target/*war /usr/local/tomcat/webapps/maven-web-app.war
 
 
